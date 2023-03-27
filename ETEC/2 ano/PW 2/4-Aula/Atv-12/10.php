@@ -45,7 +45,7 @@
             
 
                 if ($num1==$num2){
-                echo "Os Valores são iguais e não possuem valores ímpares entre eles.";
+                echo "Os numeros são iguais";
                }
  
              
