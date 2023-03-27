@@ -2,6 +2,7 @@
 <?php
   $num1 = $_POST['num1'];
   $num2 = $_POST['num2'];
+  $impar = 0;
   
       if($num1>$num2)
       {
