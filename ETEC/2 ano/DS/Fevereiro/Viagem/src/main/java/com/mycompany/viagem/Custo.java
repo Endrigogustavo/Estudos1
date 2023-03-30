@@ -31,11 +31,9 @@ public class Custo {
     
     
     public void calcularViagem(Percurso p){
-        double n1 = p.getKmPerCorrida();
-        double n2 = p.getValorCombustivel();
-        double n3 = p.getValorPedagio();
+         
+         setTotalPercurso((p.getKmPerCorrida()*p.getValorCombustivel())/p.getValorPedagio());
         
-         setTotalPercurso((n1*n2)+n3);
         
         JOptionPane.showMessageDialog(null, "Custo total de viagem é "+getTotalPercurso());
     
