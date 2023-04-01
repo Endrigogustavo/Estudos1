@@ -6,14 +6,12 @@
 <body>
     <?php
 
-    
-    $num = $_POST['num'];
-   if($num>= 100){
-    echo "Valor maior ou igual a 100";
-   }
-   else{
-    echo "Valor menor que 100";
-   }
+    $num2 = 0;
+for ($num=3; $num<=8; $num++) {
+   $num2 += $num;
+         
+}
+echo "Soma ". $num2;
 
     ?>
 </body>

@@ -7,13 +7,10 @@
     <?php
 
     
-    $num = $_POST['num'];
-   if($num>= 100){
-    echo "Valor maior ou igual a 100";
-   }
-   else{
-    echo "Valor menor que 100";
-   }
+for ($num=4; $num<=20; $num+=4) {
+    echo "Os numeros divisiveis por 4 são ".$num .'<br/>';
+         
+}
 
     ?>
 </body>
