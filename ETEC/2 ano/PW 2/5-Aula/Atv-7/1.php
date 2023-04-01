@@ -8,12 +8,33 @@
 
     
     $num = $_POST['num'];
-   if($num>= 100){
-    echo "Valor maior ou igual a 100";
-   }
-   else{
-    echo "Valor menor que 100";
-   }
+    switch($num){
+    case 1:  
+    echo "Secretaria";
+    break;
+
+    case 2:  
+    echo "Gerente";
+    break;
+
+    case 3:  
+    echo "Operario";
+    break;
+
+    case 4:  
+    echo "Analista";
+    break;
+
+    case 5:  
+    echo "Faxineiro";
+    break;
+
+    default:
+    echo "Código inválido";
+    break;
+    
+
+    }
 
     ?>
 </body>
