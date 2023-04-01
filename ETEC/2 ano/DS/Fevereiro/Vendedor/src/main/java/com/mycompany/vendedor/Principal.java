@@ -12,13 +12,13 @@ import javax.swing.JOptionPane;
  */
 public class Principal {
     public static void main(String[] args) {
-        Vendedor vend = new Vendedor();
+        Vendedor vend = new Vendedor("", 0);
         
     double s = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor vendido"));
     
-    vend.calculoCommisao(s);
+    double resul = vend.calculoCommisao(s);
     
-    JOptionPane.showMessageDialog(null,vend.getRetorno());
+    JOptionPane.showMessageDialog(null,resul);
     }
     
 }

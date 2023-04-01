@@ -12,19 +12,14 @@ import javax.swing.JOptionPane;
  */
 public class Vendedor {
   private String nome;
-  private double retorno;
-  private double  sal;
- 
-  
-  public Vendedor(){
-   this("",0,0);
-}
+  private double salbase;
 
-    public Vendedor(String nome, double retorno, double sal) {
+    public Vendedor(String nome, double salbase) {
         this.nome = nome;
-        this.retorno = retorno;
-        this.sal = sal;
+        this.salbase = salbase;
     }
+  
+
 
     public String getNome() {
         return nome;
@@ -34,33 +29,25 @@ public class Vendedor {
         this.nome = nome;
     }
 
-    public double getRetorno() {
-        return retorno;
+    public double getSalbase() {
+        return salbase;
     }
 
-    public void setRetorno(double retorno) {
-        this.retorno = retorno;
+    public void setSalbase(double salbase) {
+        this.salbase = salbase;
     }
-
-    public double getSal() {
-        return sal;
-    }
-
-    public void setSal(double sal) {
-        this.sal = sal;
-    }
-
     
-    public double calculoCommisao (double vend){
- this.setSal(Double.parseDouble(JOptionPane.showInputDialog("Digite o salario")));
+        public double calculoCommisao (double vend){
+ this.setSalbase(Double.parseDouble(JOptionPane.showInputDialog("Digite o salario")));
  this.setNome(JOptionPane.showInputDialog("digite o nome"));
  
- this.setRetorno(this.getSal()+ (vend*0.1));
+ vend = (vend*0.1);
+ double novosal = getSalbase()+vend;
  
-        return getRetorno();
+        return novosal;
      
         
     }
-    
-    
 }
+
+
