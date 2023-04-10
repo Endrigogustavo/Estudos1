@@ -6,7 +6,6 @@
 package text.ex_interface;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 public class Limpar extends JFrame{
     JLabel rotulo1,rotulo2;
@@ -26,15 +25,7 @@ public class Limpar extends JFrame{
     texto1.setBounds(120,20,200,20);
     texto2.setBounds(120,60,200,20);
     limpar.setBounds(150,100,80,20);
-    limpar.addActionListener(
-            new ActionListener(){
-                 public void actionPerformed(ActionEvent e){
-                     texto1.setText(null);
-                     texto2.setText(null);
-                     texto1.requestFocus();
-                 }
-            }
-    );
+    
     tela.add(rotulo1);
     tela.add(rotulo2);
     tela.add(texto1);
