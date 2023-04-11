@@ -37,6 +37,9 @@ public class AtvInterface extends JFrame{
     ocultar = new JButton("Ocultar");
     habilitar = new JButton("Habilitar");
     des = new JButton("Desabilitar");
+   
+   
+    
     
     rotulo1.setBounds(100,40,100,25);
     rotulo2.setBounds(100,80,100,25);
@@ -54,6 +57,9 @@ public class AtvInterface extends JFrame{
     ocultar.setBounds(300,250,80,25);
     habilitar.setBounds(200,250,80,25);
     des.setBounds(100,250,80,25);
+    
+    
+    
     
     somar.addActionListener(
             new ActionListener(){
@@ -95,7 +101,7 @@ public class AtvInterface extends JFrame{
             numero2 = Integer.parseInt(texto2.getText());
             mult = numero1 * numero2;
             exibir.setVisible(true);
-            exibir.setText("A multiplicação é "+mult);
+            exibir.setText("A subtração é "+mult);
             }
             }
     
@@ -110,7 +116,7 @@ public class AtvInterface extends JFrame{
             numero2 = Integer.parseInt(texto2.getText());
             div = numero1 / numero2;
             exibir.setVisible(true);
-            exibir.setText("A divisão é "+div);
+            exibir.setText("A subtração é "+div);
             }
             }
     
@@ -142,8 +148,8 @@ public class AtvInterface extends JFrame{
             new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-            rotulo1.setVisible(false);
-            rotulo2.setVisible(false);
+            exibir.setVisible(false);
+            
             }
             }
     
@@ -153,33 +159,21 @@ public class AtvInterface extends JFrame{
             new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-            rotulo1.setVisible(true);
-            rotulo2.setVisible(true);
+            exibir.setVisible(true);
+          
             }
             }
     
     
     );
-                        
-            limpar.addActionListener(
-            new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-            texto1.setText(null);
-            texto2.setText(null);
-            texto1.requestFocus();
-            }
-            }
-    
-    
-    );
+             
                                     
             habilitar.addActionListener(
             new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-            rotulo1.setEnabled(true);
-            rotulo2.setEnabled(true);
+            exibir.setEnabled(true);
+           
             }
             }
     
@@ -190,8 +184,8 @@ public class AtvInterface extends JFrame{
             new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-            rotulo1.setEnabled(false);
-            rotulo2.setEnabled(false);
+            exibir.setEnabled(false);
+           
             }
             }
     
@@ -225,5 +219,6 @@ public class AtvInterface extends JFrame{
     public static void main(String[] args) {
         AtvInterface app = new AtvInterface();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
     }
 }
