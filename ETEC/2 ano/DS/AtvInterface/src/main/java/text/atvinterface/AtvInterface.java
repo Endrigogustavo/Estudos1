@@ -95,7 +95,7 @@ public class AtvInterface extends JFrame{
             numero2 = Integer.parseInt(texto2.getText());
             mult = numero1 * numero2;
             exibir.setVisible(true);
-            exibir.setText("A subtração é "+mult);
+            exibir.setText("A multiplicação é "+mult);
             }
             }
     
@@ -110,7 +110,7 @@ public class AtvInterface extends JFrame{
             numero2 = Integer.parseInt(texto2.getText());
             div = numero1 / numero2;
             exibir.setVisible(true);
-            exibir.setText("A subtração é "+div);
+            exibir.setText("A divisão é "+div);
             }
             }
     
