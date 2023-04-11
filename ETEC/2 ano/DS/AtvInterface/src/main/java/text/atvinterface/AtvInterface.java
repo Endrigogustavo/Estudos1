@@ -186,7 +186,7 @@ public class AtvInterface extends JFrame{
     
     );
             
-                        habilitar.addActionListener(
+            des.addActionListener(
             new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
