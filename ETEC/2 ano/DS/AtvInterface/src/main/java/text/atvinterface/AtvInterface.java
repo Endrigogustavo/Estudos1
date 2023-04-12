@@ -38,8 +38,6 @@ public class AtvInterface extends JFrame{
     habilitar = new JButton("Habilitar");
     des = new JButton("Desabilitar");
    
-   
-    
     
     rotulo1.setBounds(100,40,100,25);
     rotulo2.setBounds(100,80,100,25);
@@ -101,7 +99,7 @@ public class AtvInterface extends JFrame{
             numero2 = Integer.parseInt(texto2.getText());
             mult = numero1 * numero2;
             exibir.setVisible(true);
-            exibir.setText("A subtração é "+mult);
+            exibir.setText("A multiplicação é "+mult);
             }
             }
     
@@ -116,7 +114,7 @@ public class AtvInterface extends JFrame{
             numero2 = Integer.parseInt(texto2.getText());
             div = numero1 / numero2;
             exibir.setVisible(true);
-            exibir.setText("A subtração é "+div);
+            exibir.setText("A divisão é "+div);
             }
             }
     
@@ -191,6 +189,21 @@ public class AtvInterface extends JFrame{
     
     
     );
+            
+            
+    somar.setMnemonic(KeyEvent.VK_ADD);
+    subtrair.setMnemonic(KeyEvent.VK_SUBTRACT);
+    multiplicar.setMnemonic(KeyEvent.VK_MULTIPLY);
+    dividir.setMnemonic(KeyEvent.VK_DIVIDE);
+    limpar.setMnemonic(KeyEvent.VK_5);
+    ex.setMnemonic(KeyEvent.VK_4);
+    ocultar.setMnemonic(KeyEvent.VK_3);
+    habilitar.setMnemonic(KeyEvent.VK_2);
+    des.setMnemonic(KeyEvent.VK_1);
+    sair.setMnemonic(KeyEvent.VK_ENTER);
+    
+    
+    
     exibir.setVisible(false);
     
     tela.add(rotulo1);
@@ -219,6 +232,5 @@ public class AtvInterface extends JFrame{
     public static void main(String[] args) {
         AtvInterface app = new AtvInterface();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
     }
 }
