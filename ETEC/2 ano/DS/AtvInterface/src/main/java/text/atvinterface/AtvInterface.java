@@ -13,7 +13,7 @@ import java.awt.event.*;
  * @author endri
  */
 public class AtvInterface extends JFrame{
-    JLabel rotulo1, rotulo2, exibir;
+    JLabel rotulo1, rotulo2, exibir,nome;
     JTextField texto1, texto2;
     JButton somar,subtrair,dividir,multiplicar,sair,limpar,ex,ocultar,habilitar,des;
     
@@ -22,6 +22,7 @@ public class AtvInterface extends JFrame{
     super("Exemplo de soma");
     Container tela = getContentPane();
     setLayout(null);
+    nome = new JLabel("Created by Endrigo, 2DS");
     rotulo1 = new JLabel("1 Numero ");
     rotulo2 = new JLabel("2 numero ");
     texto1 = new JTextField(5);
@@ -55,6 +56,7 @@ public class AtvInterface extends JFrame{
     ocultar.setBounds(300,250,80,25);
     habilitar.setBounds(200,250,80,25);
     des.setBounds(100,250,80,25);
+    nome.setBounds(100, 320, 150, 25);
     
     
     
@@ -221,6 +223,7 @@ public class AtvInterface extends JFrame{
     tela.add(ocultar);
     tela.add(habilitar);
     tela.add(des);
+    tela.add(nome);
         setSize(700,470);
         setVisible(true);
         setLocationRelativeTo(null);
