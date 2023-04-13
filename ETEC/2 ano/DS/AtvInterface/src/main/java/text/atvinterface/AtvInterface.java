@@ -206,6 +206,7 @@ public class AtvInterface extends JFrame{
     
     
     
+    
     exibir.setVisible(false);
     
     tela.add(rotulo1);
@@ -227,6 +228,7 @@ public class AtvInterface extends JFrame{
         setSize(700,470);
         setVisible(true);
         setLocationRelativeTo(null);
+        setResizable(false);
     
     }
 
