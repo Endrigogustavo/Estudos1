@@ -27,13 +27,16 @@ JTextField texto1, texto2, texto3, texto4;
     texto3 = new JTextField(5);
     texto4 = new JTextField(10);
     
-        ImageIcon icone = new ImageIcon("Imagem.jpg");
+        ImageIcon icone = new ImageIcon("src/Imagem.jpg");
         imagem = new JLabel(icone);
     
     texto1.setBounds(200,40,200,25);
     texto2.setBounds(200,80,20,25);
     texto3.setBounds(200,120,80,25);
     texto4.setBounds(200,160,80,25);
+    texto1.setForeground(Color.blue);
+    texto2.setBackground(Color.yellow);
+    texto3.setHorizontalAlignment(JTextField.CENTER);
     
     
       rotulo1.setBounds(100,40,100,25);
@@ -50,7 +53,10 @@ JTextField texto1, texto2, texto3, texto4;
       rotulo2.setFont(new Font("Comic Sans",Font.BOLD,16));
       rotulo3.setFont(new Font("Comic Sans MS",Font.BOLD,20));
       rotulo4.setFont(new Font("Tahoma",Font.BOLD,28));
-        
+      
+          imagem.setBounds(10, 10, 500, 500);
+          
+          
     tela.add(rotulo1);
     tela.add(rotulo2);
     tela.add(rotulo3);
@@ -63,7 +69,9 @@ JTextField texto1, texto2, texto3, texto4;
     
     tela.add(imagem);
     
-        setSize(700,470);
+   
+    
+        setSize(1000,1470);
         setVisible(true);
         setLocationRelativeTo(null);
         setResizable(false);
