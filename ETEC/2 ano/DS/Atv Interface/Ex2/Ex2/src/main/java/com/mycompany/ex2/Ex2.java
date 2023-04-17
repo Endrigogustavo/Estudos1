@@ -54,7 +54,7 @@ JTextField texto1, texto2, texto3, texto4;
       rotulo3.setFont(new Font("Comic Sans MS",Font.BOLD,20));
       rotulo4.setFont(new Font("Tahoma",Font.BOLD,28));
       
-          imagem.setBounds(10, 10, 500, 500);
+          imagem.setBounds(0, 0, 1000, 1000);
           
           
     tela.add(rotulo1);
