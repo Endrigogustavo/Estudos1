@@ -78,3 +78,57 @@ void loop()
   
  
 }
+
+
+
+void exibirNumero(int numero) {
+
+  switch (numero) {
+
+    case 0:
+
+      digitalWrite(SEG_A, HIGH);
+
+      digitalWrite(SEG_B, HIGH);
+
+      digitalWrite(SEG_C, HIGH);
+
+      digitalWrite(SEG_D, HIGH);
+
+      digitalWrite(SEG_E, HIGH);
+
+      digitalWrite(SEG_F, HIGH);
+
+      digitalWrite(SEG_G, LOW);
+
+      break;
+
+    case 1:
+
+      digitalWrite(SEG_A, LOW);
+
+      digitalWrite(SEG_B, HIGH);
+
+      digitalWrite(SEG_C, HIGH);
+
+      digitalWrite(SEG_D, LOW);
+
+      digitalWrite(SEG_E, LOW);
+
+      digitalWrite(SEG_F, LOW);
+
+      digitalWrite(SEG_G, LOW);
+
+      break;
+
+    case 2:
+
+      // código para exibir o número 2
+
+      break;
+
+    // adicione os casos para os números restantes
+
+  }
+
+}
