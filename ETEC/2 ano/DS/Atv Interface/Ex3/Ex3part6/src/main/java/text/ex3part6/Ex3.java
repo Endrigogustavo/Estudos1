@@ -2,66 +2,66 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.ex3part4;
+package text.ex3part6;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-/**
- *
- * @author dti
- */
+
 public class Ex3 extends JFrame{
-    JLabel rotulo1,rotulo2,exibir;
-    JTextField texto1,texto2;
-    JButton somar;
+    JLabel rotulo1,rotulo2;
+    
+    JButton ocultar,ex;
+
     
     @SuppressWarnings("Convert2Lambda")
     public Ex3(){
     super("Exemplo de soma");
     Container tela = getContentPane();
     setLayout(null);
-    rotulo1 = new JLabel("num 1");
-    rotulo2 = new JLabel("num 2");
-    texto1 = new JTextField();
-    texto2 = new JTextField();
-    somar = new JButton();
-    exibir = new JLabel("somar");
-    
+    rotulo1 = new JLabel("1 Numero ");
+    rotulo2 = new JLabel("2 numero ");
+    ex = new JButton("Exibir");
+    ocultar = new JButton("Ocultar");
+
+   
     rotulo1.setBounds(100,40,100,25);
     rotulo2.setBounds(100,80,100,25);
-    texto1.setBounds(180,40,200,25);
-    texto2.setBounds(180,80,200,25);
-    exibir.setBounds(120,170,220,25);
-    exibir.setForeground(Color.blue);
-     somar.setBounds(500,40,80,25);
+     ex.setBounds(400,250,80,25);
+    ocultar.setBounds(300,250,80,25);
     
-           
-   somar.addActionListener(
+       ocultar.addActionListener(
             new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-            int numero1,numero2,soma;
-            soma=0;
-            numero1 = Integer.parseInt(texto1.getText());
-            numero2 = Integer.parseInt(texto2.getText());
-            soma = numero1 + numero2;
-            exibir.setVisible(true);
-            exibir.setText("A soma é "+soma);
+            rotulo1.setVisible(false);
+            rotulo2.setVisible(false);
+            
             }
             }
+    
     
     );
- 
-    exibir.setVisible(false);
+            ex.addActionListener(
+            new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+            rotulo1.setVisible(true);
+            rotulo2.setVisible(true);
+          
+            }
+            }
+    
+    
+    );
+             
+  
     
     tela.add(rotulo1);
-    tela.add(texto1);
-    tela.add(exibir);
     tela.add(rotulo2);
-    tela.add(somar);
-    tela.add(texto2);
+    tela.add(ex);
+    tela.add(ocultar);
         setSize(700,470);
         setVisible(true);
         setLocationRelativeTo(null);
