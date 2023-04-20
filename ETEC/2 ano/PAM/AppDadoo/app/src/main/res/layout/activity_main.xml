@@ -28,4 +28,18 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/dice_1" />
 
+    <EditText
+        android:id="@+id/end"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:autofillHints="name"
+        android:hint="Numero da Sorte"
+        android:inputType="text"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
