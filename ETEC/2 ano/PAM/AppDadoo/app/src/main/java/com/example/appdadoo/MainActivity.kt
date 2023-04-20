@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val dice = Dice1(6)
         val diceRoll = dice.roll(6)
         val S: EditText = findViewById(R.id.end)
+        val txt: TextView = findViewById(R.id.txtname)
 
         val diceImage: ImageView = findViewById(R.id.imageView)
         val drawableResource =
@@ -35,8 +37,10 @@ class MainActivity : AppCompatActivity() {
         val num: Int = S.toString().toInt()
 
         if (num == diceRoll){
-            
-
+            txt.text = "Voce ganhou"
+        }
+        else{
+            txt.text = "Voce Perdeu"
         }
 
         diceImage.setImageResource(drawableResource)
