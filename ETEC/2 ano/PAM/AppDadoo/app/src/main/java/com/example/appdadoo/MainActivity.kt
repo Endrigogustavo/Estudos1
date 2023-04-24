@@ -2,8 +2,10 @@ package com.example.appdadoo
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.widget.*
-
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -11,22 +13,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val btnRoll: Button = findViewById(R.id.btnRoll)
-
-        btnRoll.setOnClickListener {
-            rollDice()
-        }
-
+        val rollButton: Button = findViewById(R.id.button)
+        val S: EditText = findViewById(R.id.end)
+        rollButton.setOnClickListener { rollDice() }
     }
 
-    private fun rollDice() {
+    fun rollDice() {
+        val dice = Dice1(6)
+        val diceRoll = dice.roll(6)
+        val S: EditText = findViewById(R.id.end)
+        val txt: TextView = findViewById(R.id.txtname)
 
-
-        val diceRoll = (1..6).random()
-        val diceImage: ImageView = findViewById(R.id.imgDice)
-
-        val drawableResource = when (diceRoll) {
+        val diceImage: ImageView = findViewById(R.id.imageView)
+        val drawableResource =
+            when (diceRoll) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
             3 -> R.drawable.dice_3
@@ -35,20 +35,18 @@ class MainActivity : AppCompatActivity() {
             else -> R.drawable.dice_6
         }
 
-        diceImage.setImageResource(drawableResource)
+        val num: Int = S.toString().toInt()
 
-        val txtNum: TextView = findViewById(R.id.txtNum)
-        val txtRes: TextView = findViewById(R.id.txtRes)
-        var SortNum: EditText = findViewById(R.id.SortNum)
-
-        txtNum.text = diceRoll.toString()
-
-        if(diceRoll == SortNum.text.toString().toInt()){
-            Toast.makeText(this, "Ganhou!!!", Toast.LENGTH_SHORT).show()
-        }else{
-            Toast.makeText(this, "Perdeu!!!", Toast.LENGTH_SHORT).show()
+        if (num == diceRoll){
+            txt.text = "Voce ganhou"
+        }
+        else{
+            txt.text = "Voce Perdeu"
         }
 
+        diceImage.setImageResource(drawableResource)
+        diceImage.contentDescription = diceRoll.toString()
     }
+
 
 }
