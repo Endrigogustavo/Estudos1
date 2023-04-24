@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,15 +9,15 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imgDice"
+        android:id="@+id/img"
         android:layout_width="138dp"
         android:layout_height="198dp"
         android:layout_gravity="center_horizontal"
         tools:srcCompat="@drawable/dice_1" />
 
     <TextView
-        android:id="@+id/txtNum"
-        android:text="Numero da Sorte"
+        android:id="@+id/txtN"
+        android:text="Numero da sorte"
         android:textSize="30sp"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
@@ -24,7 +25,7 @@
         />
 
     <Button
-        android:id="@+id/btnRoll"
+        android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -32,21 +33,28 @@
         android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/txtRes"
+        android:id="@+id/txtR"
         android:text="Boa sorte"
         android:textSize="30sp"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
-
+    <TextView
+        android:id="@+id/txtRR"
+        android:text=""
+        android:textSize="30sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
     <EditText
-        android:id="@+id/SortNum"
+        android:id="@+id/S"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:inputType="number"
         android:textSize="30sp" />
 
-</LinearLayout>
 
+</LinearLayout>
