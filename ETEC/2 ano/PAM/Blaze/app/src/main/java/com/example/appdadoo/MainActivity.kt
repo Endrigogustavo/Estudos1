@@ -35,12 +35,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         diceImage.setImageResource(drawableResource)
+
         val txtN: TextView = findViewById(R.id.txtN)
-        val txtR: TextView = findViewById(R.id.txtR)
         val txtRR: TextView = findViewById(R.id.txtR)
-        var S: EditText = findViewById(R.id.S)
+        var blaze: EditText = findViewById(R.id.rodaroda)
+
         txtN.text = "O numero sorteado é "+diceRoll.toString()
-        if(diceRoll == S.text.toString().toInt()){
+
+
+        if(diceRoll == blaze.text.toString().toInt()){
             txtRR.text = "GANHOU +R$1000 na conta :)"
         }else{
             txtRR.text = "Perdeu men -R$10000 na conta :("
