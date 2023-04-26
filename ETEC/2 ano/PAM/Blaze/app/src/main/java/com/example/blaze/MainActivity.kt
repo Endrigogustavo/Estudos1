@@ -1,4 +1,4 @@
-package com.example.appdadoo
+package com.example.blaze
 
 import android.annotation.SuppressLint
 import android.os.Bundle

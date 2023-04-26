@@ -1,4 +1,4 @@
-package com.example.appdadoo
+package com.example.blaze
 
 import org.junit.Test
 
