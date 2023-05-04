@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Abr-2023 às 19:49
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.0.13
+-- Tempo de geração: 04-Maio-2023 às 15:55
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -21,6 +21,10 @@ SET time_zone = "+00:00";
 -- Banco de dados: `bd_rh`
 --
 
+CREATE DATABASE `bd_rh`;
+
+use `bd_rh`;
+
 -- --------------------------------------------------------
 
 --
@@ -32,6 +36,22 @@ CREATE TABLE `cargo` (
   `Descricao` varchar(30) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `cargo`
+--
+
+INSERT INTO `cargo` (`CodCargo`, `Descricao`) VALUES
+('1', 'Setor do Rh da empresa'),
+('2', 'Setor de TI da empresa'),
+('3', 'Setor de ADM da empresa'),
+('4', 'Setor de Db da empresa'),
+('5', 'Setor de LOG da empresa'),
+('6', 'Setor de Marketing da empresa'),
+('7', 'Setor do Design da empresa'),
+('8', 'Setor de finanças da empresa'),
+('9', 'Setor de lucro da empresa'),
+('10', 'Setor do Vendas da empresa');
+
 -- --------------------------------------------------------
 
 --
@@ -42,6 +62,22 @@ CREATE TABLE `departamento` (
   `CodigoDep` int(11) NOT NULL,
   `Descricao` varchar(30) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `departamento`
+--
+
+INSERT INTO `departamento` (`CodigoDep`, `Descricao`) VALUES
+(1, 'Setor do Rh da empresa'),
+(2, 'Setor de TI da empresa'),
+(3, 'Setor de ADM da empresa'),
+(4, 'Setor de Db da empresa'),
+(5, 'Setor de LOG da empresa'),
+(6, 'Setor de Marketing da empresa'),
+(7, 'Setor do Design da empresa'),
+(8, 'Setor de finanças da empresa'),
+(9, 'Setor de lucro da empresa'),
+(10, 'Setor do Vendas da empresa');
 
 -- --------------------------------------------------------
 
@@ -74,6 +110,27 @@ CREATE TABLE `funcionarios` (
   `Telefone` varchar(15) NOT NULL,
   `Data admicao` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `funcionarios`
+--
+
+INSERT INTO `funcionarios` (`Matricula`, `Nome`, `DataNas`, `Nascionalidade`, `Sexo`, `EstadoCivil`, `RG`, `CPF`, `Endereco`, `Telefone`, `Data admicao`) VALUES
+(2341, 'Fábio Rafael de Paula', '0000-00-00', 'Brasileiro', 'Masculino', 'Casado', '42.667.109-0', '084.529.747-36', 'Avenida São Lucas', '(63) 98891-8694', '0000-00-00'),
+(24513, 'José Tomás Renan Vieira', '0000-00-00', 'Portugues', 'Masculino', 'Solteiro', '17.893.900-6', '522.459.150-38', 'Rua das Alpíneas', '(66) 2740-0983', '0000-00-00'),
+(34623, 'Adriana Catarina da Conceição', '0000-00-00', 'Brasileira', 'Feminino', 'Solteira', '42.075.378-3', '655.766.443-36', 'Rua Lontra', '(63) 98728-4194', '0000-00-00'),
+(13413, 'Pedro Henrique Erick Yago Peixoto', '0000-00-00', 'Espanhou', 'Masculino', 'Solteiro', '45.733.072-7', '521.596.062-35', 'Rua Nélia Campos de OLiveira', '(22) 98899-4774', '0000-00-00'),
+(235235, 'Iago Rafael Drumond', '0000-00-00', 'Brasileiro', 'Masculino', 'Solteiro', '40.269.140-4', '983.447.387-76', 'Rua Mário Colonhesi', '(14) 99307-5242', '0000-00-00'),
+(234114, 'Carla Isis Corte Real', '0000-00-00', 'Portuguesa', 'Feminino', 'Solteiro', '35.719.706-9', '527.811.562-99', 'Rua Valentin Dalastra', '(66) 2824-9166', '0000-00-00'),
+(547433, 'Marilene Quindeler Vogas', '0000-00-00', 'Brasileiro', 'Feminino', 'Solteiro', '36.945.838-2', '175.854.820-78', 'Rua Duzentos e Trinta e Seis', '(65) 3091-8655', '0000-00-00'),
+(23634, 'Higor Ubaldo da Paixão', '0000-00-00', 'Brasileiro', 'Masculino', 'Solteiro', '19.262.065-4', '432.988.660-08', 'Rua Golfo do Alasca', '(92) 97686-3261', '0000-00-00'),
+(6234623, 'Ana Caroline Lyrio Nigro', '0000-00-00', 'Brasileiro', 'Feminino', 'Solteiro', '16.827.648-3', '035.736.150-40', 'Rua Barão de Boa Esperança', '(97) 99778-2127', '0000-00-00'),
+(623326, 'Celia Carneiro Kassab', '0000-00-00', 'Brasileiro', 'Feminino', 'Solteiro', '10.865.939-2', '231.108.480-15', 'Quadra SHPS Quadra 603 Conjunto 96C', '(61) 98733-9948', '0000-00-00'),
+(6475431, 'Geanny Ascar Pacheco', '0000-00-00', 'Brasileiro', 'Masculino', 'Solteiro', '32.525.968-9', '509.373.010-60', 'Rua Piranema', '(77) 2860-4428', '0000-00-00'),
+(12543, 'Oseias Carmanin Carmoriz', '0000-00-00', 'Brasileiro', 'Masculino', 'Solteiro', '49.241.348-4', '093.663.840-05', 'Rua Eunápolis', '(91) 3697-8865', '0000-00-00'),
+(234626, 'Emanuel Lopez Vidal', '0000-00-00', 'Brasileiro', 'Masculino', 'Solteiro', '34.355.255-3', '719.637.360-01', 'Rua Porto Santo Julians', '(66) 2946-3164', '0000-00-00'),
+(236236, 'Franciele Sodre Geraldo', '0000-00-00', 'Brasileiro', 'Masculino', 'Solteiro', '42.660.088-5', '485.929.790-30', 'Avenida Morobá', '(84) 3042-1768', '0000-00-00'),
+(236213, 'Vivian Ascar Faria', '0000-00-00', 'Brasileiro', 'Masculino', 'Solteiro', '22.251.236-2', '174.676.440-60', 'Avenida Pinheiro Machado', '(96) 2379-7475', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -149,7 +206,7 @@ ALTER TABLE `ocupacao`
 -- AUTO_INCREMENT de tabela `funcionarios`
 --
 ALTER TABLE `funcionarios`
-  MODIFY `Matricula` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `Matricula` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6475432;
 
 --
 -- AUTO_INCREMENT de tabela `lotacao`
