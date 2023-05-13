@@ -18,8 +18,12 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `bd_rh`
+-- Banco de dados: `bd_rh2`
 --
+
+CREATE database `bd_rh2`;
+
+USE `bd_rh2`;
 
 -- --------------------------------------------------------
 
@@ -228,28 +232,11 @@ ALTER TABLE `cargo`
 ALTER TABLE `departamento`
   ADD PRIMARY KEY (`CodigoDep`);
 
---
--- Índices para tabela `dependentes`
---
-ALTER TABLE `dependentes`
-  ADD PRIMARY KEY (`Matricula`);
 
 --
 -- Índices para tabela `funcionarios`
 --
 ALTER TABLE `funcionarios`
-  ADD PRIMARY KEY (`Matricula`);
-
---
--- Índices para tabela `lotacao`
---
-ALTER TABLE `lotacao`
-  ADD PRIMARY KEY (`Matricula`);
-
---
--- Índices para tabela `ocupacao`
---
-ALTER TABLE `ocupacao`
   ADD PRIMARY KEY (`Matricula`);
 
 --
@@ -261,19 +248,6 @@ ALTER TABLE `ocupacao`
 --
 ALTER TABLE `funcionarios`
   MODIFY `Matricula` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6475432;
-
---
--- AUTO_INCREMENT de tabela `lotacao`
---
-ALTER TABLE `lotacao`
-  MODIFY `Matricula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=512564;
-
---
--- AUTO_INCREMENT de tabela `ocupacao`
---
-ALTER TABLE `ocupacao`
-  MODIFY `Matricula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=512564;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
