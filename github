@@ -2,9 +2,9 @@ git config --global user.name "Endrigogustavo"
 
 git config --global user.email "endrigogustavo2006@gmail.com"
 
-git clone https://github.com/Endrigogustavo/Estudos.git
+git clone https://github.com/Endrigogustavo/Estudos1.git
 
-cd Estudos
+cd Estudos1
 
 "git branch // serve para ver as brenchs"
 
