@@ -43,7 +43,7 @@ rotulo5 = new JLabel("Nome: ");
 rotulo6 = new JLabel("Idade: ");
 texto1 = new JTextField(20);
 texto2 = new JTextField(10);
-copiar = new JButton("Copiar");
+copiar = new JButton("Enviar");
 limpar = new JButton("Limpar");
 lista = new JComboBox(estado);
 tam1 = new JRadioButton("Masculino");
@@ -51,9 +51,9 @@ tam2 = new JRadioButton("Feminino");
 grupo = new ButtonGroup();
 grupo.add(tam1);
 grupo.add(tam2);
-auto = new JCheckBox("Negrito");
-bar = new JCheckBox("Itálico");
-av = new JCheckBox("Normal");
+auto = new JCheckBox("Automovel");
+bar = new JCheckBox("Barco");
+av = new JCheckBox("Aviao");
 
 
 
@@ -107,6 +107,10 @@ tela.add(auto);
 tela.add(bar);
 tela.add(tam1); tela.add(tam2);
 
+copiar.addActionListener(new ActionListener(){
+    public void actionPerformed(ActionEvent e){
+JOptionPane.showMessageDialog(null,"Seu nome é "+texto1.getText()+"\n Sua idade é "+texto2.getText()+"\n E seu estado civil é "+lista.getSelectedItem().toString());}});
+
 
 
 setSize(540,430);
@@ -115,7 +119,7 @@ setVisible(true);
 
 }
 
-//////////////////main//////////////////////
+
 public static void main(String args[]){
 Ex3 app = new Ex3();
 app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
