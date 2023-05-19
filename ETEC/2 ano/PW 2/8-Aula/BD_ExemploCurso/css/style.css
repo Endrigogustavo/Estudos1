@@ -1,6 +1,51 @@
 @import url('https://fonts.google');
 *
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*/
+
 html {
   scroll-behavior: smooth;
 }
@@ -20,151 +65,17 @@ body{
   /*background: linear-gradient(#fafafa, #d0bbf1);*/
   max-height: 1500px;
   max-height: 1500px;
+  background-color: #ACF0E3;
   
 }
-header
-{
-  position:absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
 
-}
-header .logo
-{
-  color: beige;
-  font-weight: 500;
-  text-decoration: none;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-
-
-}
-header ul
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-header ul li
-{
-  list-style: none;
-  margin-left: 20px;
-}
-header ul li a
-{
-  text-decoration: none;
-  padding: 6px 15px;
-  color: beige;
-  border-radius: 20px;
-
-
-}
-header ul li a:hover ,
-header ul li a.active
-{
-  background: #fff;
-  color: #833602;
-}
-#section
-{
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  padding: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-#section::before
-{ 
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+img {
+  width: 100px;
   height: 100px;
-  z-index: 1000;
-}
-#section img
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-}
-#section img#moon
-{ 
-   width: 500px;
-  height: 500px;
-  position: relative;
-top: 80px;
-}
-#section img#mountainsf
-{
- 
-position: absolute;
-width: 420px;
-  height: 100px;
-  
-left: 550px;
-top: 70px;
-}
-#section img#mountainsd
-{
- 
- width: 100%;
-  height: 700px;
-  top: 50;
-  
-}
-#text
-{
-  position: absolute;
-  color: rgb(206, 209, 4);
-  white-space: nowrap;
-  font-size: 5vw;
-  z-index: 9;
 
 }
-#btn
-{
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 30px;
-  border-radius: 40px;
-  background: #fff;
-  color: #ff9100;
-  font-size: 1.5em;
-  z-index: 9;
-  transform: translateY(100px);
-}
-.sec
-{
-  position: relative;
-  padding: 100px;
-  background: #0d021f;
-}
 
-.sec h2
-{
-  font-size: 3.5em;
-  margin-bottom: 10px;
-  color: #fff;
-  text-justify: distribute;
-}
-.sec p 
-{ font-size: 1.2em;
-  color: #fff;
-  text-justify: distribute;
+.img1{
+  margin-top: 100px;
+
 }
