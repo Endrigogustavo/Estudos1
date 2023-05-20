@@ -25,7 +25,7 @@
                 <?php echo $pro_mostrar[2]; ?>
             <?php
         }
-            echo "<br><br><button><a href = '../Menu.html'>Voltar </a></button> "; ?>
+            echo "<br><br><button><a href = '../index.html'>Voltar </a></button> "; ?>
             
     </section></center>
 </body>
