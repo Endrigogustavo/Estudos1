@@ -27,6 +27,11 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `produto`
 --
 
+CREATE DATABASE `exemplocurso`
+
+USE `exemplocurso`
+
+
 CREATE TABLE `produto` (
   `id` int(11) NOT NULL,
   `nome` varchar(50) NOT NULL,
