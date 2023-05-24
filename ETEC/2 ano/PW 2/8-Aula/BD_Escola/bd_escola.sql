@@ -20,7 +20,9 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `bd_escola`
 --
+CREATE database `bd_escola`;
 
+USE `bd_escola`;
 -- --------------------------------------------------------
 
 --

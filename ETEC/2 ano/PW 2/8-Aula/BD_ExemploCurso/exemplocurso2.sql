@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15-Maio-2023 às 19:20
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.1.2
+-- Tempo de geração: 24-Maio-2023 às 13:57
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,19 +18,14 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `exemplocurso`
+-- Banco de dados: `exemplocurso2`
 --
+CREATE database `exemplocurso2`;
 
--- --------------------------------------------------------
-
+USE `exemplocurso2`;
 --
 -- Estrutura da tabela `produto`
 --
-
-CREATE DATABASE `exemplocurso`
-
-USE `exemplocurso`
-
 
 CREATE TABLE `produto` (
   `id` int(11) NOT NULL,
