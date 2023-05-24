@@ -60,6 +60,11 @@ public class Ex3 extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 texto1.setText("");
                 texto2.setText("");
+                auto.setSelected(false);
+                bar.setSelected(false);
+                av.setSelected(false);
+                grupo.clearSelection();
+                lista.setSelectedIndex(-1);
                 texto1.requestFocus();
             }
         });
