@@ -150,7 +150,7 @@ fun Scrolling(modifier: Modifier = Modifier) {
                 "Burgeon e Hyperbloom podem ser ativados por um grupo diferente daquele que ativou o Bloom original, incluindo o ambiente e sua escala de dano com as estatísticas do responsável pela aplicação de Pyro ou Electro.",
             fontWeight = FontWeight.Bold, fontSize = 13.sp,color = Color.White, modifier = Modifier .padding(20.dp),)
 
-        
+
         Text("núcleo abundante\n" +
                 "Certas habilidades de personagem e buffs de eventos farão com que a reação de Bloom produza núcleos abundantes em vez de núcleos Dendro. Bountiful Cores explodem 0,4 segundos após sua criação, causando AoE Dendro DMG em um raio de 6,5 m para inimigos e jogadores. DMG dado aos jogadores é 5% do DMG dado aos inimigos.\n" +
                 "\n" +
@@ -170,6 +170,33 @@ fun Scrolling(modifier: Modifier = Modifier) {
             fontWeight = FontWeight.Bold, fontSize = 13.sp,color = Color.White, modifier = Modifier .padding(20.dp),)
 
 
+
+        Row(modifier = modifier.horizontalScroll(rememberScrollState())) {
+            Image(
+                painter = painterResource(R.drawable.ni),
+                contentDescription = "Contact profile picture",
+                modifier = Modifier
+                    // Set image size to 40 dp
+                    .size(90.dp)
+
+            )
+            Image(
+                painter = painterResource(R.drawable.t1),
+                contentDescription = "Contact profile picture",
+                modifier = Modifier
+                    // Set image size to 40 dp
+                    .size(80.dp)
+
+            )
+            Image(
+                painter = painterResource(R.drawable.t2),
+                contentDescription = "Contact profile picture",
+                modifier = Modifier
+                    // Set image size to 40 dp
+                    .size(80.dp)
+
+            )
+        }
 
     }
 
